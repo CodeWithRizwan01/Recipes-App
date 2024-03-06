@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".Fragments.RecipeFragment">
+
+    <!-- TODO: RECIPE FRAGMENT -->
+
+        <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/recipeAppBar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true">
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/recipeToolBar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="@color/primary_color"
+            android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+            app:popupTheme="@style/ThemeOverlay.AppCompat.Light"
+            app:title="All Chicken Recipes"
+            />
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <androidx.appcompat.widget.SearchView
+        android:id="@+id/searchViewRecipe"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginStart="12dp"
+        android:layout_marginEnd="12dp"
+        app:queryHint="Search..."
+        app:iconifiedByDefault="false"
+        android:layout_marginTop="12dp"
+        android:background="@drawable/shape_search_view"
+        android:theme="@style/ThemeOverlay.AppCompat.Light"
+        android:layout_below="@id/recipeAppBar"
+        />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recipeRecycler"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/searchViewRecipe"
+        android:layout_alignParentBottom="true"
+        android:paddingStart="5dp"
+        android:paddingTop="5dp"
+        android:paddingEnd="5dp"
+        android:paddingBottom="52dp"
+        android:clipToPadding="false"
+        />
+
+</RelativeLayout>

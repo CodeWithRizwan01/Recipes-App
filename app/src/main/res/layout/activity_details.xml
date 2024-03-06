@@ -1,0 +1,175 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Activities.DetailsActivity">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/detailAppBar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true">
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/detailToolBar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="@color/primary_color"
+            android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+            app:popupTheme="@style/ThemeOverlay.AppCompat.Light"
+            app:title="All Chicken Recipe"
+            />
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:scrollbars="none"
+        android:layout_alignParentBottom="true"
+        android:layout_below="@id/detailAppBar"
+        >
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            >
+
+            <ImageView
+                android:id="@+id/ivDetailImage"
+                android:layout_width="match_parent"
+                android:layout_height="180dp"
+                android:scaleType="fitXY"
+                android:layout_alignParentTop="true"
+                android:src="@drawable/iv_best_chicken_fajitas"
+                />
+
+            <TextView
+                android:id="@+id/tvDetailTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Recipe Title"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                android:layout_margin="8dp"
+                android:layout_alignParentStart="true"
+                android:layout_below="@+id/ivDetailImage"
+                />
+
+            <ImageView
+                android:id="@+id/listItemCalories"
+                android:layout_width="16dp"
+                android:layout_height="16dp"
+                android:layout_marginStart="8dp"
+                android:src="@drawable/baseline_calories_24"
+                android:layout_below="@+id/tvDetailTitle"
+                android:layout_alignParentStart="true"
+                />
+
+            <TextView
+                android:id="@+id/tvDetailCalories"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="150kcal"
+                android:textStyle="bold"
+                android:textSize="14dp"
+                android:layout_marginStart="5dp"
+                android:textColor="@color/gray_color"
+                android:layout_below="@+id/tvDetailTitle"
+                android:layout_toEndOf="@+id/listItemCalories"
+                />
+
+            <TextView
+                android:id="@+id/listItemDot"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="   •  "
+                android:textSize="14dp"
+                android:textColor="@color/gray_color"
+                android:layout_below="@+id/tvDetailTitle"
+                android:layout_toEndOf="@+id/tvDetailCalories"
+                />
+
+            <ImageView
+                android:id="@+id/listItemTime"
+                android:layout_width="16dp"
+                android:layout_height="16dp"
+                android:layout_marginStart="5dp"
+                android:src="@drawable/baseline_time_24"
+                android:layout_below="@+id/tvDetailTitle"
+                android:layout_toEndOf="@+id/listItemDot"
+                />
+
+            <TextView
+                android:id="@+id/tvDetailTime"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="30min"
+                android:textStyle="bold"
+                android:textSize="14dp"
+                android:layout_marginStart="5dp"
+                android:textColor="@color/gray_color"
+                android:layout_below="@+id/tvDetailTitle"
+                android:layout_toEndOf="@+id/listItemTime"
+                />
+
+            <TextView
+                android:id="@+id/listItemIngredients"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Ingredients:"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="12dp"
+                android:layout_below="@+id/tvDetailCalories"
+                />
+
+            <TextView
+                android:id="@+id/tvDetailIngredients"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Ingredients....."
+                android:padding="8dp"
+                android:textSize="16sp"
+                android:lineSpacingExtra="2sp"
+                android:layout_below="@+id/listItemIngredients"
+                />
+
+            <TextView
+                android:id="@+id/listItemInstruction"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Instruction:"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="4dp"
+                android:layout_below="@+id/tvDetailIngredients"
+                />
+
+            <TextView
+                android:id="@+id/tvDetailInstruction"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Instruction....."
+                android:padding="8dp"
+                android:textSize="16sp"
+                android:layout_marginBottom="52dp"
+                android:layout_below="@+id/listItemInstruction"
+                />
+
+        </RelativeLayout>
+    </ScrollView>
+
+    <com.google.android.gms.ads.AdView
+        xmlns:ads="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/adView"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_alignParentBottom="true"
+        ads:adSize="BANNER"
+        ads:adUnitId="ca-app-pub-3940256099942544/6300978111">
+    </com.google.android.gms.ads.AdView>
+
+</RelativeLayout>

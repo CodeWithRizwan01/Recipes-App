@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/opt_home"
+        android:title="Home"
+        android:icon="@drawable/icon_home_24"
+        />
+
+    <item
+        android:id="@+id/opt_recipe"
+        android:title="Recipe"
+        android:icon="@drawable/icon_recipe_24"
+        />
+
+    <item
+        android:id="@+id/opt_favorite"
+        android:title="Favorite"
+        android:icon="@drawable/icon_favorite_24"
+        />
+
+    <item
+        android:id="@+id/opt_setting"
+        android:title="Setting"
+        android:icon="@drawable/icon_settings_24"
+        />
+
+</menu>
